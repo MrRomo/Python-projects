@@ -1,0 +1,4 @@
+Para separar células benignas de malignas con machine learning, utilizará el siguiente algoritmo:
+
+Random Forest pertenece a los algoritmos “ensemble” cuál de los siguientes algoritmos es del mismo tipo:
+
