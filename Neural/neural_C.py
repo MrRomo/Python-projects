@@ -34,7 +34,7 @@ class NeuralClass:
             'Brown Hair', 'Bald', 'No eyewear', 'Eyeglasses', 'Sunglasses', 'Mustache', 'Smiling', 'Curly Hair', 'Wavy Hair', 'Straight Hair']
         self.N_UPSCLAE = 1
         self.clf, self.labels = self.getModel(
-            '../Models/race_and_gender_model.pkl')
+            'Models/race_and_gender_model.pkl')
         self.faces = self.cropper()
         self.prediction = self.clasifier()
 

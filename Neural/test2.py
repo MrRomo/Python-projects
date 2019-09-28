@@ -22,11 +22,20 @@ def camera():
 
     return batch
 
+def file():
+    batch = []
+    print("cropping")
+    print "capture image {}".format(str(10))
+    frame = cv2.imread('Fotos/01.jpg')
+    frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+    batch.append(frame)
+    return batch*10
+
 
 def files():
 
 
-    img_dir = "../Resources/Glass"  # Enter Directory of all images
+    img_dir = "Fotos"  # Enter Directory of all images
     data_path = os.path.join(img_dir, '*g')
     files = glob.glob(data_path)
     data = []
@@ -40,7 +49,7 @@ def files():
 
 if __name__ == "__main__":
 
-    batch = camera()
+    batch = file()
 
     print batch
 
@@ -59,7 +68,7 @@ if __name__ == "__main__":
     print(neural.getRace())
     print(neural.getHair())
     print(neural.getGlass())
-    pred = [neural.getGender()["res"],neural.getRace()["res"],neural.getHair()["res"],neural.getAge()["res"],neural.getGlass()['res']] 
+    pred = [neural.getGender()["res"],neural.getRace()["res"],neural.getHair()["res"],neural.getAge()["res"],str(neural.getGlass()['res'])+' Glases'] 
     # fig.suptitle('Faces Detected\n {}/{}\n{}'.format(columns, len(batch), pred))
     plt.figtext(.5,.9,'Faces Detected\n {}/{}\n{}'.format(columns, len(batch), pred), fontsize=20, ha='center')
     print("Columns {}".format(columns))

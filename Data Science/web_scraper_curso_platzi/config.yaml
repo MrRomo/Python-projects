@@ -1,0 +1,22 @@
+news_sites:
+    eluniversal:
+      url: https://www.eluniversal.com.mx
+      queries:
+        homepage_article_links : '.field-content a'
+        article_body: '.field-name-body'
+        article_title: '.pane-content h1'
+
+    elpais:
+      url: https://www.elpais.com
+      queries:
+        homepage_article_links : ''
+        article_body: ''
+        article_title: ''
+        
+    semana:
+      url: https://www.semana.com
+      queries:
+        homepage_article_links : '.article-h a'
+        article_body: '#contentItem'
+        article_title: '.columns h1'
+        
