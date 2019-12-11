@@ -1,0 +1,11 @@
+web:
+    sinfonia:
+      url: https://www.http://alianzasinfonia.net.co/
+      queries:
+        section: 'blog_w3ls'
+        container:'container'
+        row: 'head-row-home'
+        
+        
+
+   
