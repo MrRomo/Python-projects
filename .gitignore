@@ -10,7 +10,7 @@ __pycache__/
 .Python
 build/
 develop-eggs/
-flask_env/
+flaskEnv/
 dist/
 downloads/
 eggs/
