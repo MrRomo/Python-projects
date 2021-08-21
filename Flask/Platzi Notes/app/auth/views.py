@@ -20,6 +20,7 @@ def login():
         username = login_form.username.data
         password = login_form.password.data
         user_doc = get_user(username)
+        print(password)
         if user_doc.to_dict() is not None:
             passwor_from_db = user_doc.to_dict()['password']
             if(password == passwor_from_db):
@@ -58,8 +59,9 @@ def signup():
         username = signup_form.username.data
         password = signup_form.password.data
         user_doc = get_user(username)
-
-        if user_doc.to_dict() is not None:
+        print(user_doc.to_dict(), )
+        if user_doc.to_dict() is None:
+            print('Paso el registro')
             password_hash = generate_password_hash(password)
             user_data = UserData(username, password_hash)
             user_put(user_data)
